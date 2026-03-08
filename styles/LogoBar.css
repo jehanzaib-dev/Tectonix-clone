@@ -1,0 +1,30 @@
+.carousel-container {
+  overflow: hidden; /* Hides the scroll bar */
+  white-space: nowrap; /* Prevents cards from wrapping */
+  width: 100%;
+}
+
+.card-wrapper {
+  display: inline-block;
+  /* Apply animation to both wrappers */
+  animation: scroll-loop 8s linear infinite; 
+}
+
+.card {
+  display: inline-block;
+  /* Adjust width/margins as needed */
+  width: 200px; 
+  height: 150px;
+  margin-right: 20px;
+  /* Add styling for your cards */
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate by 50% to move one full set of cards across */
+    transform: translateX(-100%); 
+  }
+}

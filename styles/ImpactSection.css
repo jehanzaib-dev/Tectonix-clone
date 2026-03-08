@@ -1,0 +1,123 @@
+/* ImpactSection.css */
+
+/* Impact Section Container */
+.impact-section {
+  background-color: #ffffff;
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.impact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Impact small heading */
+.impact-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1d4ed8;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+  padding: 6px 14px;
+}
+
+/* Top-right corner */
+.impact-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #1d4ed8;
+  border-right: 2px solid #1d4ed8;
+}
+
+/* Bottom-left corner */
+.impact-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid #1d4ed8;
+  border-left: 2px solid #1d4ed8;
+}
+
+
+/* Section main heading */
+.impact-main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 64px;
+  color: #111;
+}
+
+/* Cards container - responsive */
+.impact-cards {
+  display: flex;
+  flex-direction: column; /* vertical on mobile */
+  gap: 48px;
+  align-items: center;
+}
+
+/* Horizontal layout on large screens */
+@media (min-width: 1024px) {
+  .impact-cards {
+    flex-direction: row;       /* horizontal row */
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+/* Individual card */
+.impact-card {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 32px 24px;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover lift effect */
+.impact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Card main heading (number) */
+.impact-card-main {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1d4ed8;
+}
+
+/* Card sub heading */
+.impact-card-sub {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+/* Card description */
+.impact-card-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .impact-main-heading {
+    font-size: 2rem;
+  }
+  .impact-card {
+    padding: 24px 16px;
+  }
+}

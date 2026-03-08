@@ -1,0 +1,169 @@
+/* -------------------- */
+/* FAQ SECTION STYLES   */
+/* -------------------- */
+
+.faqSection {
+  padding: 120px 8%;
+}
+
+/* GRID LAYOUT */
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80px;
+}
+/* LEFT COLUMN */
+.faqLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sticky headings */
+.faqSticky {
+  /* sticky only on large screens */
+}
+
+/* Card below sticky */
+.faqCard {
+  padding: 30px 25px;
+  max-width: 600px;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.faqCard h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.faqCard p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.faqButton {
+  background: rgba(255, 45, 45, 0.1);
+  color: #ff2d2d;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqButton:hover {
+  background: #ff2d2d;
+  color: white;
+}
+
+/* FAQ LABEL WITH CORNER BORDERS */
+.faqLabel {
+  position: relative;
+  display: inline-block;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.faqLabel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #ff2d2d;
+  border-right: 2px solid #ff2d2d;
+}
+
+.faqLabel::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-bottom: 2px solid #ff2d2d;
+  border-left: 2px solid #ff2d2d;
+}
+
+/* HEADING */
+.faqHeading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* DESCRIPTION */
+.faqDescription {
+  font-size: 18px;
+  color: #666;
+  max-width: 650px;
+}
+
+/* ACCORDION */
+.faqAccordion {
+  max-width: 900px;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 22px 0;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faqIcon {
+  font-size: 22px;
+  color: #ff2d2d;
+}
+
+.faqAnswer {
+  margin-top: 15px;
+}
+
+.faqAnswer p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ------------------------- */
+/* LARGE SCREEN STYLES       */
+/* ------------------------- */
+@media (min-width: 1024px) {
+  .faqGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    align-items: stretch; /* match left column height to accordion */
+  }
+
+  .faqLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto; /* natural height, not stretching beyond accordion */
+  }
+
+  .faqSticky {
+    position: sticky;
+    top: 120px;
+    z-index: 1;
+  }
+
+  .faqCard {
+    margin-top: auto; /* pushes card to bottom of left column */
+  }
+}

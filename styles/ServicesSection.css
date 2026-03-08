@@ -1,0 +1,93 @@
+/* Marquee container */
+.services-carousel-container {
+  overflow: hidden; 
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Two wrappers for continuous scroll */
+.services-card-wrapper {
+  display: inline-block;
+  animation: scroll-loop 15s linear infinite; 
+}
+
+/* Individual service cards */
+.services-card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 300px;
+  height: 200px;
+  margin-right: 32px;
+  background-color: #f9fafb;
+  border-radius: 30px;
+  text-align: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 8px 8px 8px #666;
+}
+
+/* Hover lift effect */
+.services-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+/* Image container (same as icon area) */
+.service-icon {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+/* Title */
+.service-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+/* Description */
+.service-description {
+  color: #555;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background-color: rgba(0,0,0,0.85);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 8px 12px;
+  border-radius: 12px;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: transform 0.1s;
+}
+
+/* Scroll animation */
+@keyframes scroll-loop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause scroll on hover */
+.services-card-wrapper:hover {
+  animation-play-state: paused;
+}
+
+
+

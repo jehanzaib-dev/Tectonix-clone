@@ -1,0 +1,67 @@
+.partner-btn{
+  position:fixed;
+  bottom:60px;
+  right:25px;
+  z-index:1000;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:8px 10px;
+  background:black;
+  color:white;
+  text-decoration:none;
+
+  border-radius:10px;
+
+  font-size:14px;
+  font-weight:500;
+
+  transition:all 0.3s ease;
+}
+
+/* arrow circle */
+
+.partner-icon{
+  position:relative;
+
+  width:22px;
+  height:22px;
+
+  background:white;
+  color:black;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+/* arrows */
+
+.arrow{
+  position:absolute;
+  font-size:14px;
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+
+.arrow-2{
+  transform:translate(-10px,10px);
+  opacity:0;
+}
+
+/* hover animation */
+
+.partner-btn:hover .arrow-1{
+  transform:translate(10px,-10px);
+  opacity:0;
+}
+
+.partner-btn:hover .arrow-2{
+  transform:translate(0,0);
+  opacity:1;
+}

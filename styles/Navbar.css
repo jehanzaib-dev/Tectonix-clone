@@ -1,0 +1,218 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 40px;
+  z-index: 1000;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.nav-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 60px;
+  padding: 0 20px;
+
+  position: relative;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span{
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+
+/* =========================
+   HAMBURGER → X ANIMATION
+========================= */
+
+.hamburger.open span:nth-child(1){
+  transform: rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.open span:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3){
+  transform: rotate(-45deg) translate(5px,-5px);
+}
+
+
+/* =========================
+   MOBILE NAV MENU
+========================= */
+
+.nav-links{
+  position: absolute;
+  top: 70px;
+  left: 0;
+
+  width: 100%;
+  background: white;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.nav-links.active{
+  display: flex;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover{
+  opacity: 0.7;
+}
+
+
+/* =========================
+   MOBILE CTA BUTTON
+========================= */
+
+.mobile-cta{
+  padding: 10px 18px;
+  background: #aaa;
+  color: white;
+  border-radius: 25px;
+}
+
+
+/* =========================
+   DESKTOP CTA (HIDDEN ON MOBILE)
+========================= */
+
+.nav-cta{
+  display: none;
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px){
+
+  .nav-container{
+    padding: 0 40px;
+  }
+
+}
+
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1024px){
+
+  .nav-container{
+    max-width: 1200px;
+    margin: auto;
+    height: 80px;
+  }
+
+
+  /* NAV LINKS INLINE */
+
+  .nav-links{
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    gap: 32px;
+    padding: 0;
+    width: auto;
+  }
+  .nav-links a{
+    color: white;
+  }
+
+  /* HIDE HAMBURGER */
+
+  .hamburger{
+    display: none;
+  }
+
+
+  /* DESKTOP CTA BUTTON */
+
+  .nav-cta{
+    display: block;
+
+    padding: 10px 20px;
+    background: white;
+    color: black;
+
+    border-radius: 30px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+  }
+
+  .nav-cta:hover{
+    opacity: 0.85;
+  }
+
+
+  /* HIDE MOBILE CTA */
+
+  .mobile-cta{
+    display: none;
+  }
+
+}

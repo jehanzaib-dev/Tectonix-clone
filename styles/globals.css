@@ -1,0 +1,46 @@
+/* globals.css */
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Headings */
+h1 {
+  font-weight: 700;
+  color: #111;
+}
+h2 {
+  font-weight: 600;
+  color: #111;
+}
+p {
+  color: #555;
+  line-height: 1.6;
+}

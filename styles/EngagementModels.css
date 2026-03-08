@@ -1,0 +1,205 @@
+.engagement-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.engagement-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Headings */
+.engagement-headings {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.engagement-headings .section-label {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ff0000; /* example red */
+  position: relative;
+  padding: 5px 10px;
+}
+
+.engagement-headings h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0 15px;
+  line-height: 1.2;
+}
+
+.engagement-headings p {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Wrapper for both cards */
+.engagement-cards-wrapper {
+  background-color: #f5f5f5; /* light grey */
+  border-radius: 20px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column; /* stacked on mobile */
+  gap: 30px;
+  margin-top: 50px;
+  align-items: stretch; /* ensure equal height */
+}
+
+/* Cards inside wrapper */
+.engagement-card,
+.partner-card-single {
+  flex: 1 1 0; /* equal height & grow */
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Custom roadmap card */
+.engagement-card {
+  background-color: #000;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  justify-content: space-between; /* button stays at bottom */
+}
+
+.engagement-card .card-content h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.engagement-card .card-content p {
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.engagement-card .card-button {
+  align-self: flex-end;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.engagement-card .card-button .arrow {
+  margin-left: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.engagement-card .card-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+.engagement-card .card-button:hover {
+  background-color: #e60000;
+}
+
+/* Single partner card */
+.partner-card-single {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-card-single .partner-heading {
+  font-weight: 700;
+  font-size: 16px;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.partner-card-single .partner-message {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.partner-card-single .partner-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.partner-card-single .partner-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.partner-card-single .partner-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-card-single .partner-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.partner-card-single .partner-post {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Large screen layout */
+@media (min-width: 1024px) {
+  .engagement-section {
+    padding: 120px 40px;
+  }
+
+  .engagement-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Upper half: headings centered */
+  .engagement-headings {
+    flex: 0 0 50%; /* upper half */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  /* Lower half: wrapper with cards side by side */
+  .engagement-cards-wrapper {
+    flex: 0 0 50%; /* lower half */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: stretch; /* ensure equal height */
+    padding: 50px 40px;
+  }
+
+  .engagement-cards-wrapper .engagement-card,
+  .engagement-cards-wrapper .partner-card-single {
+    flex: 1 1 0;
+    margin: 0;
+  }
+}

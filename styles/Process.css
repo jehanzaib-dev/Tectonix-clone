@@ -1,0 +1,121 @@
+.process-section {
+  padding: 100px 8%;
+  background: #fff;
+  color: #111;
+}
+
+.process-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+
+/* Headings */
+.process-headings {
+  margin-bottom: 50px;
+}
+
+.process-headings .section-label {
+  display: inline-block;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+  color: #ff2d2d;
+}
+
+.process-headings h2 {
+  font-size: 36px;
+  max-width: 600px;
+}
+
+/* Timeline and steps */
+.process-timeline {
+  position: relative;
+}
+
+/* Line */
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  width: 4px;
+  background: #ff2d2d;
+  top: 0;
+  border-radius: 2px;
+  transition: height 0.2s ease-out;
+}
+
+/* Steps */
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-left: 60px;
+}
+
+.process-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-number {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff2d2d;
+  width: 40px;
+  text-align: center;
+}
+
+.step-content h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.step-content h4 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* DESKTOP VIEW */
+@media(min-width:1100px) {
+  .process-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  /* Left half fixed */
+  .process-headings {
+    flex: 1;
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
+  }
+
+  /* Right half scrollable */
+  .process-timeline {
+    flex: 1;
+    position: relative;
+  }
+
+  .steps-wrapper {
+    padding-left: 60px;
+  }
+
+  .timeline-line {
+    left: 0;
+  }
+}
+
+/* MOBILE / TABLET FLEX ADJUSTMENTS */
+@media(max-width:1100px) {
+  .process-container {
+    flex-direction: column;
+  }
+}
